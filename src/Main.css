@@ -2,40 +2,40 @@
 @font-face
 {
 	fontFamily: Helvetica;
-	src: url("/System/Library/Fonts/Helvetica.dfont");
+	src: url("assets/fonts/Helvetica.dfont");
 	embedAsCFF: true;
 }
 @font-face
 {
 	fontFamily: Helvetica;
 	fontWeight: bold;
-	src: url("/System/Library/Fonts/Helvetica.dfont");
+	src: url("assets/fonts/Helvetica.dfont");
 	embedAsCFF: true;
 }
 @font-face
 {
 	fontFamily: "Helvetica Neue";
-	src: url("/System/Library/Fonts/HelveticaNeue.dfont");
+	src: url("assets/fonts/HelveticaNeue.dfont");
 	embedAsCFF: true;
 }
 @font-face
 {
 	fontFamily: "Helvetica Neue";
 	fontWeight: bold;
-	src: url("/System/Library/Fonts/HelveticaNeue.dfont");
+	src: url("assets/fonts/HelveticaNeue.dfont");
 	embedAsCFF: true;
 }
 @font-face
 {
 	fontFamily: Rockwell;
-	src: url("/Library/Fonts/Microsoft/Rockwell");
+	src: url("assets/fonts/Rockwell");
 	embedAsCFF: true;
 }
 @font-face
 {
 	fontFamily: Rockwell;
 	fontWeight: bold;
-	src: url("/Library/Fonts/Microsoft/Rockwell");
+	src: url("assets/fonts/Rockwell");
 	embedAsCFF: true;
 }
 
