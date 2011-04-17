@@ -51,7 +51,7 @@
 			
 			private function enterVideoChat():void
 			{
-				videoChat.sessionId = "2c1c2ff443d2506fd40c0f40ff89fe708cc1dbc9";
+				videoChat.sessionId = "28757622dbf26a5a7599c2d21323765662f1d436";
 				videoChat.connect();
 			}
 			
