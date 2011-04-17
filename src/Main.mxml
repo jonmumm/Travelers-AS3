@@ -91,11 +91,19 @@
 		<s:RichText color="#ffffff" fontFamily="Helvetica" fontSize="33.044" fontWeight="bold" kerning="off" lineHeight="200%" textAlign="center" trackingRight="-2%" d:userLabel="I want to..." whiteSpaceCollapse="preserve" x="165" y="162">
 			<s:content><s:p><s:span>I</s:span><s:span kerning="auto"> want to...</s:span></s:p></s:content>
 		</s:RichText>
-		<s:Button skinClass="components.Button12" x="38" y="239" x.IWantToSelected="37" id="button1" click="button_clickHandler()"/>
-		<s:Button skinClass="components.Button23" x="38" y="334"/>
-		<s:Button skinClass="components.Button3" x="38" y="429"/>
-		<s:Button skinClass="components.Button42" x="38" y="527"/>
-		<s:Button skinClass="components.DoneButton2" x="180" y="621" click="button_clickHandler_2()"/>
+		
+		<s:VGroup includeIn="IWantTo, IWantToSelected" top="240" gap="24" left="20" right="20">
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Visit a Destination"/>
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Do an Activity"/>
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Eat/Drink"/>
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Meet New People"/>
+		</s:VGroup>
+		<s:Button label="Go" click="button_clickHandler_2()"
+				  skinClass="components.skins.DoneButtonSkin"
+				  bottom.IWantToSelected="20" width.IWantToSelected="160"
+				  horizontalCenter.IWantToSelected="0"/>	
+		
+		
 		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/button.png')" d:userLabel="button" x="398" y="253" visible.IWantTo="false" id="bitmapimage1"/>
 		<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="37.128" fontWeight="bold" kerning="off" lineHeight="329.4%" d:userLabel="1" whiteSpaceCollapse="preserve" x="412" y="262" visible.IWantTo="false" id="richtext1" color.CliqList="#FFFFFF" text.CliqList="3" color.Cliq="#FFFFFF" text.Cliq="3" color.VideoChat="#FFFFFF" text.VideoChat="3" color.IWantToSelected="#FFFFFF" text.IWantToSelected="3">
 			<s:content.IWantTo><s:p><s:span>1</s:span></s:p></s:content.IWantTo>
