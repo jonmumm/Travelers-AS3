@@ -1,0 +1,146 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>AdventureCliq</title> 
+
+	<link rel="stylesheet" href="http://launchrock.com/api/lr.api.0.2.plain.css">
+	<script src="http://launchrock.com/api/lr.api.0.2.js"></script>
+
+
+ 
+<STYLE> 
+body 
+{ 
+ margin: 0; 
+ padding: 0; 
+ padding-top: 10px;
+ text-align: center; 
+} 
+#centered
+{ 
+ width: 800px; /* set to desired width in px or percent */
+ text-align: left; /* optionally you could use "justified" */
+ border: 0px; /* Changing this value will add lines around the centered area */
+ padding: 0;  
+ margin: 0 auto; 
+} 
+p {
+	text-align: left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	color:#666;
+	width:450px;
+
+} 
+h1 {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+       font-size: 34px;
+	   color:#0d4b77;
+}
+
+.text_input {
+	width: 190px;
+	height: 36px;
+	padding: 0 8px;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	color: #ccc;
+	border: 1px solid #ccc;
+}
+
+.submit {
+	background: url('./images/go_btn.jpg') no-repeat;
+	width: 52px;
+	height: 39px;
+	border: none;
+	color: transparent;
+}
+
+#learnmore {
+	display: none;
+}
+
+#paragraph_text, #paragraph_3 {
+	font-size: 14px;
+	color: #777;
+}
+
+#shareurl {
+	font-size: 14px;
+	color: #777;
+}
+	
+
+</style>
+
+</head> 
+ 
+<script>
+$(document).ready(function(){
+    LR.lrInstance = new LrInstance('container',{
+
+        tagLine: "",
+        description: "",
+        refCodeUrl: "http://adventurecliq.com/?ref=",
+        lrDomain: "adventurecliq.com",
+        apiKey: "58bc861eb514b1085e358b54208f9507",
+        inviteList: "Launching soon. Enter your email to join our invite list:"
+    });        
+
+    // Handles events related to signup form, form validations
+    // and submitting the form to the server:
+    LR.signupForm = new SignupForm({
+        secondaryPostLocation: ""
+    });
+
+
+    // Handles rendering the post submit content:
+    LR.postSubmit = new PostSignupForm('pagesubmit',{
+        twitterHandle: "AdventureCliq",
+        twitterMessage: "Meet Awesome New People When Traveling with AdventureCliq.com #launch",
+        newUserHeaderText: "Thanks! Want to get an early invitation?",
+        newUserParagraphText: "Invite at least 3 friends using the link below. The more friends you invite, the sooner you'll get access!<br/><br/>To share with your friends, click 'Recommend', 'Tweet' and 'Invite by Email':",
+        newUserParagraphText3: "Or copy and paste the following link to share wherever you want!",
+        returningUserHeaderText: "Welcome Back!",
+        returningUserParagraphText: "Invite at least 3 friends using the link below. The more friends you invite, the sooner you'll get access!<br/><br/>To share with your friends, click 'Recommend', 'Tweet' and 'Invite by Email':",
+        returningUserParagraphText3: "Or copy and paste the following link to share wherever you want!",
+        statsPreText: "Your live stats: ",
+        footerLinks: "<a href='http://twitter.com/AdventureCliq'>Follow Us on Twitter</a>"
+,showHeaderText: true,
+showParagraphText: true    });
+
+
+});
+
+    </script>
+<body> 
+
+<div id="centered" >
+
+	<div style="background-image:url(images/header_signup.jpg); width:780px; height:450px; background-repeat:no-repeat;">
+		<img src="images/1pt_px.gif" width="780" height="150" />
+		<div style="margin:0px 0px 0px 280px;">
+			<!-- API Form 
+			<form action="post" action="http://208.72.154.212/widgetapi.0.1.php">
+				<input class="text_input" type="text" name="email" />
+				<input type="hidden" name="referralid" value="" />
+				<input type="hidden" name="apiKey" value="58bc861eb514b1085e358b54208f9507" />
+				<input type="hidden" name="lrDomain" value="adventurecliq.com" />
+				<input type="hidden" name="urlPrefix" value="adventurecliq.com/?refid=" />
+				<input class="submit" type="submit" />
+			</form> 
+			-->
+			<div id="container"></div>
+			
+
+			</div>
+
+	</div>
+	
+</div>
+</body> 
+</html> 
