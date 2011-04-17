@@ -43,9 +43,6 @@
 			if (!_session || _session.sessionId != _sessionId) {
 				disconnect();
 				_session = TB.initSession(_sessionId);
-				
-				_session.addEventListener(SessionConnectEvent.CONNECTED, sessionConnected, false, 0, true);
-				_session.addEventListener(StreamEvent.CREATED, streamCreated, false, 0, true);
 			}
 		}
 		
@@ -56,6 +53,9 @@
 		public function connect() : void 
 		{
 			if (_session) {
+				_session.addEventListener(SessionConnectEvent.CONNECTED, sessionConnected, false, 0, true);
+				_session.addEventListener(StreamEvent.CREATED, streamCreated, false, 0, true);
+				
 				_session.connect("1127", "devtoken");
 			}
 		}
@@ -67,6 +67,8 @@
 				
 				_session.removeEventListener(SessionConnectEvent.CONNECTED, sessionConnected);
 				_session.removeEventListener(StreamEvent.CREATED, streamCreated);
+				
+				_publisher = null;
 			}
 		}
 		

@@ -93,15 +93,11 @@
 		</s:RichText>
 		
 		<s:VGroup includeIn="IWantTo, IWantToSelected" top="240" gap="24" left="20" right="20">
-			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Visit a Destination"/>
-			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Do an Activity"/>
-			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Eat/Drink"/>
-			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Meet New People"/>
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Visit a Destination" click="button_clickHandler()"/>
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Do an Activity" click="button_clickHandler()"/>
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Eat/Drink" click="button_clickHandler()"/>
+			<s:Button width="100%" skinClass="components.skins.JoinChannelButtonSkin" label="Meet New People" click="button_clickHandler()"/>
 		</s:VGroup>
-		<s:Button label="Go" click="button_clickHandler_2()"
-				  skinClass="components.skins.DoneButtonSkin"
-				  bottom.IWantToSelected="20" width.IWantToSelected="160"
-				  horizontalCenter.IWantToSelected="0"/>	
 		
 		
 		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/button.png')" d:userLabel="button" x="398" y="253" visible.IWantTo="false" id="bitmapimage1"/>
@@ -328,7 +324,8 @@
 		</fx:DesignLayer>
 	</fx:DesignLayer>
 	<fx:DesignLayer d:userLabel="semi-transparent black bar copy 2" id="designlayer5">
-		<graphics:Graphic2 x="0" y="-2"/>
+		<graphics:Graphic2 x="0" y="-2"
+						   x.IWantTo="0" y.IWantTo="0"/>
 		<s:RichText color="#ffffff" fontFamily="Helvetica Neue" fontSize="30.02" fontWeight="bold" kerning="off" lineHeight="120%" textAlign="center" d:userLabel="Label copy 4" whiteSpaceCollapse="preserve" x="138" y="11">
 			<s:content><s:p><s:span>AdventureCliq</s:span></s:p></s:content>
 		</s:RichText>
@@ -341,6 +338,11 @@
 					width="100%"
 					height="{height - 65}"
 					bottom="0"/>
+	<s:Button includeIn="IWantTo,IWantToSelected" label="Go" click="button_clickHandler_2()"
+			  skinClass="components.skins.DoneButtonSkin"
+			  x.IWantTo="185" y.IWantTo="601" width.IWantTo="103"
+			  bottom.IWantToSelected="20" width.IWantToSelected="160"
+			  horizontalCenter.IWantToSelected="0"/>
 	<s:transitions>
 		<s:Transition fromState="VideoChat" toState="IWantTo" autoReverse="true">
 			<s:Parallel>
