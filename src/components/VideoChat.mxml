@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:comp="components.*">
+	
+	<!-- Copyright 2011 TokBox. -->
+	
+	<mx:Script>
+	    <![CDATA[
+			import com.tokbox.TB;
+			import com.tokbox.events.SessionConnectEvent;
+			import com.tokbox.events.StreamEvent;
+			import com.tokbox.model.Publisher;
+			import com.tokbox.model.Session;
+			import com.tokbox.model.Stream;
+			import com.tokbox.model.Subscriber;
+		
+		/**
+		 *	Creates an opentok chat
+		 *
+		 *	@langversion ActionScript 3.0
+		 *	@playerversion Flash 9.0
+		 *
+		 *	@author Adam Ullman
+		 *	@since  2011-04-17
+		 */
+		
+		//--------------------------------------
+		//  PRIVATE VARIABLES
+		//--------------------------------------
+		
+		private var _sessionId : String = "";
+		private var _session : Session;
+		private var _publisher : Publisher;
+		
+		//--------------------------------------
+		//  GETTER/SETTERS
+		//--------------------------------------
+		
+		public function set sessionId( arg:String ) : void 
+		{ 
+			_sessionId = arg;
+			
+			if (!_session || _session.sessionId != _sessionId) {
+				disconnect();
+				_session = TB.initSession(_sessionId);
+				
+				_session.addEventListener(SessionConnectEvent.CONNECTED, sessionConnected, false, 0, true);
+				_session.addEventListener(StreamEvent.CREATED, streamCreated, false, 0, true);
+			}
+		}
+		
+		//--------------------------------------
+		//  PUBLIC METHODS
+		//--------------------------------------
+		
+		public function connect() : void 
+		{
+			if (_session) {
+				_session.connect("1127", "devtoken");
+			}
+		}
+		
+		public function disconnect() : void 
+		{
+			if (_session) {
+				_session.disconnect();
+				
+				_session.removeEventListener(SessionConnectEvent.CONNECTED, sessionConnected);
+				_session.removeEventListener(StreamEvent.CREATED, streamCreated);
+			}
+		}
+		
+		//--------------------------------------
+		//  EVENT HANDLERS
+		//--------------------------------------
+		
+		private function sessionConnected(event:SessionConnectEvent) : void 
+		{
+			subscribeToStreams(event.streams);
+			
+			publish();
+		}
+		
+		private function streamCreated(event:StreamEvent) : void 
+		{
+			subscribeToStreams(event.streams);
+		}
+		
+		//--------------------------------------
+		//  PRIVATE & PROTECTED INSTANCE METHODS
+		//--------------------------------------
+		
+		private function subscribeToStreams(streams:Array) : void 
+		{
+			for each (var stream:Stream in streams) {
+				if (stream.connection != _session.connection) {
+					var subscriber:Subscriber = _session.subscribe(stream);
+					videoBox.addChild(subscriber);
+				}
+			}
+		}
+		
+		private function publish() : void 
+		{
+			if (!_publisher) {
+				_publisher = _session.publish();
+				var publisherParent:VideoContainer = new VideoContainer();
+				publisherParent.addChild(_publisher);
+				publisherParent.percentWidth = 100;
+				publisherParent.percentHeight = 100;
+				publisherContainer.addChild(publisherParent);
+			}
+		}
+		
+	    ]]>
+	</mx:Script>
+	
+	<comp:VideoBoxAnimated id="videoBox"
+		width="100%"
+		height="100%"
+		backgroundColor="#ffffff"
+		horizontalScrollPolicy="off"
+		verticalScrollPolicy="off"
+	/>
+	
+	<mx:Canvas id="publisherContainer"
+					   x="{videoBox.numChildren > 0 ? 5 : 0}"
+					   y="{videoBox.numChildren > 0 ? height - 105 : 0}"
+					   cornerRadius="5"
+					   width="{videoBox.numChildren > 0 ? 100 : width}"
+					   height="{videoBox.numChildren > 0 ? 100 : height}"
+					   borderColor="0xFFFFFF"
+					   borderStyle="solid">
+	</mx:Canvas>
+
+</mx:Canvas>

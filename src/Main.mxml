@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<s:Application xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:graphics="assets.graphics.*" backgroundColor="#FFFFFF" height="691" preloaderChromeColor="#FFFFFF" width="480">
+<s:Application xmlns:d="http://ns.adobe.com/fxg/2008/dt" 
+			   xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:graphics="assets.graphics.*" 
+			   xmlns:comp="components.*" 
+			   backgroundColor="#FFFFFF" 
+			   height="691" 
+			   preloaderChromeColor="#FFFFFF" 
+			   width="480">
 	<fx:Style source="Main.css"/>
 	<fx:Script>
 		<![CDATA[
@@ -46,6 +54,17 @@
 			{
 				currentState='Cliq';
 			}
+			
+			private function enterVideoChat():void
+			{
+				videoChat.sessionId = "2c1c2ff443d2506fd40c0f40ff89fe708cc1dbc9";
+				videoChat.connect();
+			}
+			
+			private function exitVideoChat():void
+			{
+				videoChat.disconnect();
+			}
 
 		]]>
 
@@ -55,7 +74,7 @@
 		<s:State name="VisitDestination"/>
 		<s:State name="CliqList"/>
 		<s:State name="Cliq"/>
-		<s:State name="VideoChat"/>
+		<s:State name="VideoChat" enterState="enterVideoChat();" exitState="exitVideoChat()"/>
 		<s:State name="IWantToSelected"/>
 	</s:states>
 	<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 1.png')" d:userLabel="Layer 1" x="0" y="0"/>
@@ -310,6 +329,10 @@
 		<s:Button skinClass="components.donebuttoncopy" x="374" y="10" visible.CliqList="false" click="button_clickHandler_1()" visible.Cliq="false" visible.VideoChat="false"/>
 		<s:Button skinClass="components.backbuttoncopy" x="8" y="9" visible.VisitDestination="false" click="button_clickHandler_4()"/>
 	</fx:DesignLayer>
+	<comp:VideoChat id="videoChat" visible.VideoChat="true" visible.Cliq="false" visible.CliqList="false" visible.IWantTo="false" visible.IWantToSelected="false" visible.VisitDestination="false"
+					width="100%"
+					height="{height - 65}"
+					bottom="0"/>
 	<s:transitions>
 		<s:Transition fromState="VideoChat" toState="IWantTo" autoReverse="true">
 			<s:Parallel>
