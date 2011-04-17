@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt">
+	<fx:Metadata>[HostComponent("spark.components.Button")]</fx:Metadata>
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<fx:DesignLayer d:userLabel="Button 3">
+		<fx:DesignLayer d:userLabel="Button">
+			<s:BitmapImage blendMode="multiply" smooth="true" source="@Embed('/assets/images/traveler3/1 Button copy_s Drop Shadow.png')" d:userLabel="1 Button copy's Drop Shadow" x="0" y="0"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/1 Button copy.png')" d:userLabel="1 Button copy" x="4" y="3"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Border copy.png')" d:userLabel="Border copy" x="2" y="2"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/button copy 2.png')" d:userLabel="button copy 2" visible="false" x="13" y="14"/>
+			<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="37.128" fontWeight="bold" kerning="off" lineHeight="329.4%" d:userLabel="1 copy 2" visible="false" whiteSpaceCollapse="preserve" x="27" y="22">
+				<s:content><s:p><s:span>3</s:span></s:p></s:content>
+			</s:RichText>
+		</fx:DesignLayer>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/arrow copy 10.png')" d:userLabel="arrow copy 10" x="153" y="27">
+			<s:mask>
+				<s:Group x="0" y="0">
+					<s:Path data="M 0 2.9 L 6.15 9.05 L 0 15.15 L 2.75 17.95 L 11.85 8.9 L 2.95 0 L 0 2.9" winding="evenOdd">
+						<s:fill>
+							<s:SolidColor color="#ff0000"/>
+						</s:fill>
+					</s:Path>
+				</s:Group>
+			</s:mask>
+		</s:BitmapImage>
+		<s:RichText color="#000000" fontFamily="Rockwell" fontSize="27.24" kerning="off" lineHeight="280%" d:userLabel="Labels copy 6" whiteSpaceCollapse="preserve" x="23" y="24">
+			<s:content><s:p><s:span>Eat/Drink</s:span></s:p></s:content>
+		</s:RichText>
+	</fx:DesignLayer>
+</s:Skin>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:graphics="assets.graphics.*">
+	<fx:Metadata>[HostComponent("spark.components.List")]</fx:Metadata>
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<s:DataGroup clipAndEnableScrolling="true" height="189" height.normal="519" id="dataGroup" itemRenderer="components.RepeatedItem3" width="437" x="0" y="0">
+		<s:layout>
+			<s:VerticalLayout/>
+		</s:layout>
+	</s:DataGroup>
+	<s:transitions>
+		<s:Transition autoReverse="true" fromState="normal" toState="disabled">
+			<s:Parallel>
+				<s:Parallel target="{dataGroup}">
+					<s:Resize duration="0"/>
+				</s:Parallel>
+			</s:Parallel>
+		</s:Transition>
+	</s:transitions>
+</s:Skin>

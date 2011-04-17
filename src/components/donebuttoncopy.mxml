@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt">
+	<fx:Metadata>[HostComponent("spark.components.Button")]</fx:Metadata>
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<fx:DesignLayer d:userLabel="done button copy">
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/button background copy_s Drop Shadow.png')" d:userLabel="button background copy's Drop Shadow" x="0" y="0"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/button background copy.png')" d:userLabel="button background copy" x="1" y="0"/>
+		<s:RichText color="#ffffff" fontFamily="Helvetica Neue" fontSize="18.012" fontWeight="bold" lineHeight="120%" textAlign="center" d:userLabel="Label copy 2" whiteSpaceCollapse="preserve" x="23" y="11">
+			<s:content><s:p><s:span>Done</s:span></s:p></s:content>
+		</s:RichText>
+	</fx:DesignLayer>
+</s:Skin>

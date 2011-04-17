@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:graphics="assets.graphics.*" autoDrawBackground="false" xmlns:mx="library://ns.adobe.com/flex/mx">
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="hovered"/>
+		<s:State name="selected"/>
+	</s:states>
+	<fx:DesignLayer d:userLabel="Flatiron building copy">
+		<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="{data.text1}" d:userLabel="Flatiron Building" whiteSpaceCollapse="preserve" x="67" y="16"/>
+		<mx:Image source="{data.image1}" d:userLabel="Layer 8 copy" x="8" y="0" smoothBitmapContent="true" maintainAspectRatio="false"/>
+		<graphics:Graphic1 x="0" y="61"/>
+		<s:CheckBox skinClass="components.Checkbox1" x="390" y="3"/>
+		<s:Rect d:userLabel="Item Highlight Rectangle" width="437" height="63" alpha.normal="0" alpha.hovered="0.3" alpha.selected="0.5">
+			<s:fill>
+				<s:SolidColor color="0xCED7EE"/>
+			</s:fill>
+		</s:Rect>
+	</fx:DesignLayer>
+</s:ItemRenderer>

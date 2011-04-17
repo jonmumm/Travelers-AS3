@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt">
+	<fx:Metadata>[HostComponent("spark.components.Button")]</fx:Metadata>
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<fx:DesignLayer d:userLabel="Button 1">
+		<fx:DesignLayer d:userLabel="Button">
+			<s:BitmapImage blendMode="multiply" smooth="true" source="@Embed('/assets/images/traveler3/1 Button_s Drop Shadow.png')" d:userLabel="1 Button's Drop Shadow" x="0" y="0"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/1 Button.png')" d:userLabel="1 Button" x="4" y="3"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Border.png')" d:userLabel="Border" x="2" y="2"/>
+		</fx:DesignLayer>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/arrow.png')" d:userLabel="arrow" x="255" y="28">
+			<s:mask>
+				<s:Group x="0" y="0">
+					<s:Path data="M 0.9 3.55 L 7.05 9.7 L 0.85 15.8 L 3.65 18.6 L 12.75 9.55 L 3.85 0.65 L 0.9 3.55" winding="evenOdd">
+						<s:fill>
+							<s:SolidColor color="#ff0000"/>
+						</s:fill>
+					</s:Path>
+				</s:Group>
+			</s:mask>
+		</s:BitmapImage>
+		<s:RichText color="#000000" fontFamily="Rockwell" fontSize="27.24" kerning="off" lineHeight="280%" d:userLabel="Labels" whiteSpaceCollapse="preserve" x="22" y="25">
+			<s:content><s:p><s:span>Visit a Destination</s:span></s:p></s:content>
+		</s:RichText>
+	</fx:DesignLayer>
+</s:Skin>

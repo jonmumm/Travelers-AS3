@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt">
+	<fx:Metadata>[HostComponent("spark.components.Button")]</fx:Metadata>
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<fx:DesignLayer d:userLabel="Button 2">
+		<fx:DesignLayer d:userLabel="Button copy">
+			<s:BitmapImage blendMode="multiply" smooth="true" source="@Embed('/assets/images/traveler3/1 Button copy 4_s Drop Shadow.png')" d:userLabel="1 Button copy 4's Drop Shadow" x="0" y="0"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/1 Button copy 4.png')" d:userLabel="1 Button copy 4" x="4" y="3"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Border copy 4.png')" d:userLabel="Border copy 4" x="2" y="1"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/button copy.png')" d:userLabel="button copy" visible="false" x="363" y="13"/>
+			<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="37.128" fontWeight="bold" kerning="off" lineHeight="329.4%" d:userLabel="1 copy" visible="false" whiteSpaceCollapse="preserve" x="377" y="24">
+				<s:content><s:p><s:span>2</s:span></s:p></s:content>
+			</s:RichText>
+		</fx:DesignLayer>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/arrow copy 9.png')" d:userLabel="arrow copy 9" x="207" y="28">
+			<s:mask>
+				<s:Group x="0" y="0">
+					<s:Path data="M 0.85 3 L 7 9.15 L 0.8 15.25 L 3.6 18.05 L 12.65 8.95 L 3.8 0.1 L 0.85 3" winding="evenOdd">
+						<s:fill>
+							<s:SolidColor color="#ff0000"/>
+						</s:fill>
+					</s:Path>
+				</s:Group>
+			</s:mask>
+		</s:BitmapImage>
+		<s:RichText color="#000000" fontFamily="Rockwell" fontSize="27.24" kerning="off" lineHeight="280%" d:userLabel="Labels copy 5" whiteSpaceCollapse="preserve" x="24" y="25">
+			<s:content><s:p><s:span>Do an Activity</s:span></s:p></s:content>
+		</s:RichText>
+	</fx:DesignLayer>
+</s:Skin>

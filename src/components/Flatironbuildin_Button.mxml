@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt">
+	<fx:Metadata>[HostComponent("spark.components.Button")]</fx:Metadata>
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<fx:DesignLayer d:userLabel="Flatiron building">
+		<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="Flatiron Building" d:userLabel="Flatiron Building" whiteSpaceCollapse="preserve" x="95" y="3"/>
+		<fx:DesignLayer d:userLabel="Message Group">
+			<fx:DesignLayer d:userLabel="bubble">
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/bubble.png')" d:userLabel="bubble" x="276" y="44"/>
+				<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="33.898" fontWeight="bold" kerning="off" lineHeight="329.4%" d:userLabel="1 copy 4" whiteSpaceCollapse="preserve" x="291" y="52">
+					<s:content><s:p><s:span>9</s:span></s:p></s:content>
+				</s:RichText>
+			</fx:DesignLayer>
+			<s:RichText color="#0d4b77" fontFamily="Helvetica" fontSize="13.538" fontWeight="bold" kerning="off" lineHeight="120%" d:userLabel="More people  in group" whiteSpaceCollapse="preserve" x="328" y="51">
+				<s:content><s:p><s:span>More people </s:span></s:p><s:p><s:span>in group</s:span></s:p></s:content>
+			</s:RichText>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 18.png')" d:userLabel="Layer 18" x="95" y="43"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 19.png')" d:userLabel="Layer 19" x="140" y="43"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 20.png')" d:userLabel="Layer 20" x="186" y="43"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 21.png')" d:userLabel="Layer 21" x="231" y="43"/>
+		</fx:DesignLayer>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 8.png')" d:userLabel="Layer 8" x="0" y="0"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line.png')" d:userLabel="line" x="0" y="97"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/arrow copy 14.png')" d:userLabel="arrow copy 14" x="418" y="37">
+			<s:mask>
+				<s:Group x="0" y="0">
+					<s:Path data="M 0.1 3.05 L 6.9 9.85 L 0.05 16.6 L 3.15 19.7 L 13.15 9.7 L 3.4 -0.05 L 0.1 3.05" winding="evenOdd">
+						<s:fill>
+							<s:SolidColor color="#ff0000"/>
+						</s:fill>
+					</s:Path>
+				</s:Group>
+			</s:mask>
+		</s:BitmapImage>
+	</fx:DesignLayer>
+</s:Skin>

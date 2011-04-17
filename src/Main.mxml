@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<s:Application xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:graphics="assets.graphics.*" backgroundColor="#FFFFFF" height="691" preloaderChromeColor="#FFFFFF" width="480">
+	<fx:Style source="Main.css"/>
+	<fx:Script>
+		<![CDATA[
+				protected function button_clickHandler_1():void
+			{
+				currentState='IWantToSelected';
+			}
+
+
+			protected function button_clickHandler():void
+			{
+				currentState='VisitDestination';
+			}
+
+
+			protected function button_clickHandler_2():void
+			{
+				currentState='CliqList';
+			}
+
+
+			protected function button_clickHandler_3():void
+			{
+				currentState='VideoChat';
+			}
+
+
+			protected function button_clickHandler_4():void
+			{
+				const state:String = currentState;
+				if ( state == 'Cliq' ) {
+					currentState='CliqList';
+				}
+				if ( state == 'CliqList' ) {
+					currentState='IWantTo';
+				}
+				if ( state == 'VideoChat' ) {
+					currentState='CliqList';
+				}
+			}
+
+
+			protected function button_clickHandler_5():void
+			{
+				currentState='Cliq';
+			}
+
+		]]>
+
+	</fx:Script>
+	<s:states>
+		<s:State name="IWantTo"/>
+		<s:State name="VisitDestination"/>
+		<s:State name="CliqList"/>
+		<s:State name="Cliq"/>
+		<s:State name="VideoChat"/>
+		<s:State name="IWantToSelected"/>
+	</s:states>
+	<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 1.png')" d:userLabel="Layer 1" x="0" y="0"/>
+	<s:BitmapImage alpha="0.3" smooth="true" source="@Embed('/assets/images/traveler3/Vector Smart Object copy 2.png')" d:userLabel="Vector Smart Object copy 2" x="0" y="0" visible.VideoChat="false" id="bitmapimage2"/>
+	<fx:DesignLayer d:userLabel="Screen 2" visible.VisitDestination="false" visible.CliqList="false" id="designlayer2" visible.Cliq="false" visible.VideoChat="false">
+		<fx:DesignLayer d:userLabel="arrows"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 5.png')" d:userLabel="Layer 5" x="0" y="0"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Vector Smart Object.png')" d:userLabel="Vector Smart Object" x="0" y="91"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 4.png')" d:userLabel="Layer 4" x="0" y="143"/>
+		<s:RichText color="#0d4b77" fontFamily="Rockwell" fontSize="34" kerning="off" lineHeight="151.7%" tabStops="S0 S50 S100 S150 S200 S250" trackingRight="-2%" typographicCase="uppercase" d:userLabel="New York" whiteSpaceCollapse="preserve" x="9" y="101">
+			<s:content><s:p><s:span>N</s:span><s:span kerning="auto">ew </s:span><s:span>Y</s:span><s:span kerning="auto">ork City</s:span></s:p></s:content>
+		</s:RichText>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Cyan background.png')" d:userLabel="Cyan background" x="0" y="145"/>
+		<s:RichText color="#ffffff" fontFamily="Helvetica" fontSize="33.044" fontWeight="bold" kerning="off" lineHeight="200%" textAlign="center" trackingRight="-2%" d:userLabel="I want to..." whiteSpaceCollapse="preserve" x="165" y="162">
+			<s:content><s:p><s:span>I</s:span><s:span kerning="auto"> want to...</s:span></s:p></s:content>
+		</s:RichText>
+		<s:Button skinClass="components.Button12" x="38" y="239" x.IWantToSelected="37" id="button1" click="button_clickHandler()"/>
+		<s:Button skinClass="components.Button23" x="38" y="334"/>
+		<s:Button skinClass="components.Button3" x="38" y="429"/>
+		<s:Button skinClass="components.Button42" x="38" y="527"/>
+		<s:Button skinClass="components.DoneButton2" x="180" y="621" click="button_clickHandler_2()"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/button.png')" d:userLabel="button" x="398" y="253" visible.IWantTo="false" id="bitmapimage1"/>
+		<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="37.128" fontWeight="bold" kerning="off" lineHeight="329.4%" d:userLabel="1" whiteSpaceCollapse="preserve" x="412" y="262" visible.IWantTo="false" id="richtext1" color.CliqList="#FFFFFF" text.CliqList="3" color.Cliq="#FFFFFF" text.Cliq="3" color.VideoChat="#FFFFFF" text.VideoChat="3" color.IWantToSelected="#FFFFFF" text.IWantToSelected="3">
+			<s:content.IWantTo><s:p><s:span>1</s:span></s:p></s:content.IWantTo>
+			<s:content.VisitDestination><s:p><s:span>1</s:span></s:p></s:content.VisitDestination>
+		</s:RichText>
+	</fx:DesignLayer>
+	<fx:DesignLayer d:userLabel="Screen 3" visible.IWantTo="false" id="designlayer1" visible.CliqList="false" visible.Cliq="false" visible.VideoChat="false" visible.IWantToSelected="false">
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Cyan background copy 2.png')" d:userLabel="Cyan background copy 2" x="0" y="64"/>
+		<s:RichText color="#ffffff" fontFamily="Helvetica" fontSize="33.044" fontWeight="bold" kerning="off" lineHeight="200%" textAlign="center" trackingRight="-2%" d:userLabel="I want to... copy 2" whiteSpaceCollapse="preserve" x="105" y="81">
+			<s:content><s:p><s:span>V</s:span><s:span kerning="auto">isit a Destination</s:span></s:p></s:content>
+		</s:RichText>
+		<s:List enabled="true" skinClass="components.Flatironbuildin_DataList" x="22" y="155">
+			<s:ArrayCollection>
+				<fx:Object image1="@Embed('/assets/images/traveler3/Layer 8 copy.png')" text1="Flatiron Building"/>
+				<fx:Object image1="@Embed('/assets/images/traveler3/Layer 8 copy.png')" text1="Central Park"/>
+				<fx:Object image1="@Embed('/assets/images/traveler3/Layer 8 copy.png')" text1="Empire State"/>
+				<fx:Object image1="@Embed('/assets/images/traveler3/Layer 8 copy.png')" text1="Grand Central"/>
+				<fx:Object image1="@Embed('/assets/images/traveler3/Layer 8 copy.png')" text1="Rockefeller Center"/>
+			</s:ArrayCollection>
+		</s:List>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 2" visible="false">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="Umpire State Building" d:userLabel="Umpire State Building" whiteSpaceCollapse="preserve" x="89" y="246"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 12.png')" d:userLabel="Layer 12" x="30" y="231"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 4.png')" d:userLabel="line copy 4" x="22" y="292"/>
+			<s:CheckBox skinClass="components.Checkbox1" x="412" y="233"/>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 3" visible="false">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="Union Square Park" d:userLabel="Union Square Park" whiteSpaceCollapse="preserve" x="89" y="319"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 8 copy 3.png')" d:userLabel="Layer 8 copy 3" x="30" y="304"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 14.png')" d:userLabel="Layer 14" x="30" y="304"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 5.png')" d:userLabel="line copy 5" x="22" y="365"/>
+			<s:CheckBox skinClass="components.Checkbox1" x="412" y="309"/>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 4" visible="false">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="Central Park" d:userLabel="Central Park" whiteSpaceCollapse="preserve" x="89" y="394"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 13.png')" d:userLabel="Layer 13" x="30" y="379"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 6.png')" d:userLabel="line copy 6" x="22" y="440"/>
+			<s:CheckBox skinClass="components.Checkbox1" x="412" y="381"/>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 5" visible="false">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="Madison Square Park" d:userLabel="Madison Square Park" whiteSpaceCollapse="preserve" x="89" y="469"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 15.png')" d:userLabel="Layer 15" x="30" y="453"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 7.png')" d:userLabel="line copy 7" x="22" y="514"/>
+			<s:CheckBox skinClass="components.Checkbox1" x="412" y="457"/>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 6" visible="false">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="Cooper Union" d:userLabel="Cooper Union" whiteSpaceCollapse="preserve" x="89" y="545"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 16.png')" d:userLabel="Layer 16" x="30" y="529"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 8.png')" d:userLabel="line copy 8" x="22" y="590"/>
+			<s:CheckBox skinClass="components.Checkbox1" x="412" y="531"/>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 7" visible="false">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="New York University" d:userLabel="New York University" whiteSpaceCollapse="preserve" x="89" y="618"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 17.png')" d:userLabel="Layer 17" x="30" y="603"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 9.png')" d:userLabel="line copy 9" x="22" y="663"/>
+			<s:CheckBox skinClass="components.Checkbox1" x="412" y="606"/>
+		</fx:DesignLayer>
+	</fx:DesignLayer>
+	<fx:DesignLayer d:userLabel="Screen 4" visible.IWantTo="false" visible.VisitDestination="false" visible.Cliq="false" id="designlayer3" visible.VideoChat="false" visible.IWantToSelected="false">
+		<fx:DesignLayer d:userLabel="arrows copy" visible="false"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Cyan background copy.png')" d:userLabel="Cyan background copy" x="0" y="64"/>
+		<s:RichText color="#ffffff" fontFamily="Helvetica" fontSize="33.044" fontWeight="bold" kerning="off" lineHeight="200%" textAlign="center" trackingRight="-2%" d:userLabel="I want to... copy" whiteSpaceCollapse="preserve" x="93" y="81">
+			<s:content><s:p><s:span>G</s:span><s:span kerning="auto">roups to Cliq With</s:span></s:p></s:content>
+		</s:RichText>
+		<s:Button skinClass="components.Flatironbuildin_Button" x="25" y="150"/>
+		<s:Button skinClass="components.CentralParkButton" x="25" y="262"/>
+		<s:Button skinClass="components.Flatironbuildin_Button2" x="25" y="377" click="button_clickHandler_5()"/>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 10">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="The Watering Hole" d:userLabel="The Watering Hole" whiteSpaceCollapse="preserve" x="119" y="489"/>
+			<fx:DesignLayer d:userLabel="Message Group copy 3">
+				<fx:DesignLayer d:userLabel="bubble copy 6">
+					<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/bubble copy 5.png')" d:userLabel="bubble copy 5" x="301" y="532"/>
+					<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="33.898" fontWeight="bold" kerning="off" lineHeight="329.4%" d:userLabel="1 copy 7" whiteSpaceCollapse="preserve" x="316" y="540">
+						<s:content><s:p><s:span>5</s:span></s:p></s:content>
+					</s:RichText>
+				</fx:DesignLayer>
+				<s:RichText color="#72bf44" fontFamily="Helvetica" fontSize="13.538" fontWeight="bold" kerning="off" lineHeight="120%" d:userLabel="More people  in group" whiteSpaceCollapse="preserve" x="353" y="539">
+					<s:content><s:p><s:span>More people </s:span></s:p><s:p><s:span>in group</s:span></s:p></s:content>
+				</s:RichText>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 18 copy 3.png')" d:userLabel="Layer 18 copy 3" x="120" y="531"/>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 19 copy 3.png')" d:userLabel="Layer 19 copy 3" x="165" y="531"/>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 20 copy 3.png')" d:userLabel="Layer 20 copy 3" x="211" y="531"/>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 21 copy 3.png')" d:userLabel="Layer 21 copy 3" x="256" y="531"/>
+			</fx:DesignLayer>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 24.png')" d:userLabel="Layer 24" x="25" y="488"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 10.png')" d:userLabel="line copy 10" x="25" y="585"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/arrow copy 17.png')" d:userLabel="arrow copy 17" x="443" y="525">
+				<s:mask>
+					<s:Group x="0" y="0">
+						<s:Path data="M 0.1 3.05 L 6.9 9.85 L 0.05 16.6 L 3.15 19.7 L 13.15 9.65 L 3.4 -0.05 L 0.1 3.05" winding="evenOdd">
+							<s:fill>
+								<s:SolidColor color="#ff0000"/>
+							</s:fill>
+						</s:Path>
+					</s:Group>
+				</s:mask>
+			</s:BitmapImage>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="Flatiron building copy 11">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="27.24" kerning="off" lineHeight="120%" text="Singing contest at Karaoke 49" trackingRight="-2%" d:userLabel="Singing contest at Karaoke 49" whiteSpaceCollapse="preserve" x="120" y="601"/>
+			<fx:DesignLayer d:userLabel="Message Group copy 4">
+				<fx:DesignLayer d:userLabel="bubble copy 8">
+					<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/bubble copy 7.png')" d:userLabel="bubble copy 7" x="301" y="642"/>
+					<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="33.898" fontWeight="bold" kerning="off" lineHeight="329.4%" d:userLabel="1 copy 8" whiteSpaceCollapse="preserve" x="305" y="651">
+						<s:content><s:p><s:span>34</s:span></s:p></s:content>
+					</s:RichText>
+				</fx:DesignLayer>
+				<s:RichText color="#f26522" fontFamily="Helvetica" fontSize="13.538" fontWeight="bold" kerning="off" lineHeight="120%" d:userLabel="More people  in group" whiteSpaceCollapse="preserve" x="353" y="650">
+					<s:content><s:p><s:span>More people </s:span></s:p><s:p><s:span>in group</s:span></s:p></s:content>
+				</s:RichText>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 18 copy 4.png')" d:userLabel="Layer 18 copy 4" x="120" y="642"/>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 19 copy 4.png')" d:userLabel="Layer 19 copy 4" x="165" y="642"/>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 20 copy 4.png')" d:userLabel="Layer 20 copy 4" x="211" y="642"/>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 21 copy 4.png')" d:userLabel="Layer 21 copy 4" x="256" y="642"/>
+			</fx:DesignLayer>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 25.png')" d:userLabel="Layer 25" x="25" y="599"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/arrow copy 18.png')" d:userLabel="arrow copy 18" x="443" y="635">
+				<s:mask>
+					<s:Group x="0" y="0">
+						<s:Path data="M 0.1 3.45 L 6.9 10.25 L 0.05 17 L 3.15 20.1 L 13.15 10.1 L 3.4 0.3 L 0.1 3.45" winding="evenOdd">
+							<s:fill>
+								<s:SolidColor color="#ff0000"/>
+							</s:fill>
+						</s:Path>
+					</s:Group>
+				</s:mask>
+			</s:BitmapImage>
+		</fx:DesignLayer>
+	</fx:DesignLayer>
+	<fx:DesignLayer d:userLabel="Screen 5" visible.IWantTo="false" visible.VisitDestination="false" visible.CliqList="false" visible.VideoChat="false" id="designlayer4" visible.IWantToSelected="false">
+		<fx:DesignLayer d:userLabel="arrows copy 3" visible="false"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Cyan background copy 3.png')" d:userLabel="Cyan background copy 3" x="0" y="64"/>
+		<s:RichText color="#ffffff" fontFamily="Helvetica" fontSize="33.044" fontWeight="bold" kerning="off" lineHeight="200%" textAlign="center" trackingRight="-2%" d:userLabel="I want to... copy 4" whiteSpaceCollapse="preserve" x="144" y="81">
+			<s:content><s:p><s:span>S</s:span><s:span kerning="auto">hake Shack</s:span></s:p></s:content>
+		</s:RichText>
+		<fx:DesignLayer d:userLabel="Message Group copy 7">
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 31.png')" d:userLabel="Layer 31" x="24" y="389"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 30.png')" d:userLabel="Layer 30" x="90" y="388"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 29.png')" d:userLabel="Layer 29" x="156" y="389"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 21 copy 7.png')" d:userLabel="Layer 21 copy 7" x="221" y="389"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 28.png')" d:userLabel="Layer 28" x="224" y="388"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 32.png')" d:userLabel="Layer 32" x="292" y="389"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 33.png')" d:userLabel="Layer 33" x="359" y="389"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 34.png')" d:userLabel="Layer 34" x="428" y="389"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 35.png')" d:userLabel="Layer 35" x="24" y="372"/>
+			<fx:DesignLayer d:userLabel="bubble copy 14" visible="false">
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/bubble copy 13.png')" d:userLabel="bubble copy 13" x="24" y="459"/>
+				<s:RichText color="#ffffff" fontFamily="Rockwell" fontSize="21.08" fontWeight="bold" kerning="off" lineHeight="329.4%" trackingRight="-10%" d:userLabel="1 copy 11" whiteSpaceCollapse="preserve" x="28" y="465">
+					<s:content><s:p><s:span>12</s:span></s:p></s:content>
+				</s:RichText>
+			</fx:DesignLayer>
+			<s:RichText color="#72bf44" fontFamily="Helvetica" fontSize="18.791" fontWeight="bold" height="488" kerning="off" lineHeight="120%" d:userLabel="More people in video chat, join!" visible="false" whiteSpaceCollapse="preserve" width="536" x="62" y="465">
+				<s:content><s:p><s:span>More people in video chat, join!</s:span></s:p></s:content>
+			</s:RichText>
+		</fx:DesignLayer>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 26.png')" d:userLabel="Layer 26" x="25" y="151"/>
+		<s:Button skinClass="components.Button5" x="42" y="288" click="button_clickHandler_3()"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 14.png')" d:userLabel="line copy 14" x="26" y="374"/>
+		<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 15.png')" d:userLabel="line copy 15" x="26" y="463"/>
+		<fx:DesignLayer d:userLabel="Julia Smith">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="22.745" fontWeight="bold" height="488" kerning="off" lineHeight="120%" d:userLabel="Julia Smith This place is awesome :)" whiteSpaceCollapse="preserve" width="536" x="120" y="481">
+				<s:content><s:p><s:span>Julia Smith</s:span></s:p><s:p><s:span fontWeight="normal">This place is awesome :)</s:span></s:p></s:content>
+			</s:RichText>
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="15.22" height="488" kerning="off" lineHeight="120%" d:userLabel="7:23 PM" whiteSpaceCollapse="preserve" width="536" x="401" y="481">
+				<s:content><s:p><s:span>7:23 PM</s:span></s:p></s:content>
+			</s:RichText>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 12.png')" d:userLabel="line copy 12" x="25" y="575"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 36.png')" d:userLabel="Layer 36" x="25" y="479"/>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="Julia Smith copy">
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="22.745" fontWeight="bold" height="488" kerning="off" lineHeight="120%" d:userLabel="David Johnson This place is awesome :)" whiteSpaceCollapse="preserve" width="536" x="120" y="592">
+				<s:content><s:p><s:span>David Johnson</s:span></s:p><s:p><s:span fontWeight="normal">This place is awesome :)</s:span></s:p></s:content>
+			</s:RichText>
+			<s:RichText color="#000000" fontFamily="Helvetica" fontSize="15.22" height="488" kerning="off" lineHeight="120%" d:userLabel="7:30 PM" whiteSpaceCollapse="preserve" width="536" x="401" y="592">
+				<s:content><s:p><s:span>7:30 PM</s:span></s:p></s:content>
+			</s:RichText>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/line copy 13.png')" d:userLabel="line copy 13" x="25" y="686"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 37.png')" d:userLabel="Layer 37" x="25" y="590"/>
+		</fx:DesignLayer>
+		<fx:DesignLayer d:userLabel="grey search bar">
+			<fx:DesignLayer d:userLabel="bar background">
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/background1.png')" d:userLabel="background" x="-1" y="625"/>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/bottom dark shadow.png')" d:userLabel="bottom dark shadow" x="0" y="689">
+					<s:mask>
+						<s:Group x="0" y="0">
+							<s:Path data="M -0.75 0.5 L 480 0.5 L 480 2 L -0.75 2 L -0.75 0.5" winding="evenOdd">
+								<s:fill>
+									<s:SolidColor color="#ff0000"/>
+								</s:fill>
+							</s:Path>
+						</s:Group>
+					</s:mask>
+				</s:BitmapImage>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/top highlight_1.png')" d:userLabel="top highlight_1" x="0" y="625">
+					<s:mask>
+						<s:Group x="0" y="0">
+							<s:Path data="M -0.75 -0.05 L 479.95 -0.05 L 479.95 1.4 L -0.75 1.4 L -0.75 -0.05" winding="evenOdd">
+								<s:fill>
+									<s:SolidColor color="#ff0000"/>
+								</s:fill>
+							</s:Path>
+						</s:Group>
+					</s:mask>
+				</s:BitmapImage>
+				<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/top highlight.png')" d:userLabel="top highlight" x="0" y="625">
+					<s:mask>
+						<s:Group x="0" y="0">
+							<s:Path data="M -0.75 -0.05 L 479.95 -0.05 L 479.95 0.65 L -0.75 0.65 L -0.75 -0.05" winding="evenOdd">
+								<s:fill>
+									<s:SolidColor color="#ff0000"/>
+								</s:fill>
+							</s:Path>
+						</s:Group>
+					</s:mask>
+				</s:BitmapImage>
+			</fx:DesignLayer>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/field_s Drop Shadow.png')" d:userLabel="field's Drop Shadow" x="5" y="635"/>
+			<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/field.png')" d:userLabel="field" x="6" y="635"/>
+			<s:RichText color="#b4b3b4" fontFamily="Helvetica Neue" fontSize="21.028" kerning="off" lineHeight="120%" d:userLabel="What do you say, chat?" whiteSpaceCollapse="preserve" x="25" y="647">
+				<s:content><s:p><s:span>What do you say, chat?</s:span></s:p></s:content>
+			</s:RichText>
+		</fx:DesignLayer>
+	</fx:DesignLayer>
+	<fx:DesignLayer d:userLabel="semi-transparent black bar copy 2" id="designlayer5">
+		<graphics:Graphic2 x="0" y="-2"/>
+		<s:RichText color="#ffffff" fontFamily="Helvetica Neue" fontSize="30.02" fontWeight="bold" kerning="off" lineHeight="120%" textAlign="center" d:userLabel="Label copy 4" whiteSpaceCollapse="preserve" x="138" y="11">
+			<s:content><s:p><s:span>AdventureCliq</s:span></s:p></s:content>
+		</s:RichText>
+	</fx:DesignLayer>
+	<fx:DesignLayer d:userLabel="top ButtonsBar (Grey-Blue) copy" visible.IWantTo="false" id="designlayer6" visible.IWantToSelected="false">
+		<s:Button skinClass="components.donebuttoncopy" x="374" y="10" visible.CliqList="false" click="button_clickHandler_1()" visible.Cliq="false" visible.VideoChat="false"/>
+		<s:Button skinClass="components.backbuttoncopy" x="8" y="9" visible.VisitDestination="false" click="button_clickHandler_4()"/>
+	</fx:DesignLayer>
+	<s:transitions>
+		<s:Transition fromState="VideoChat" toState="IWantTo" autoReverse="true">
+			<s:Parallel>
+				<s:Parallel target="{bitmapimage2}">
+					<s:Fade duration="0"/>
+				</s:Parallel>
+				<s:Parallel target="{designlayer2}">
+					<s:Fade duration="0"/>
+				</s:Parallel>
+				<s:Parallel target="{designlayer6}">
+					<s:Fade duration="0"/>
+				</s:Parallel>
+			</s:Parallel>
+		</s:Transition>
+	</s:transitions>
+</s:Application>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt">
+	<fx:Metadata>[HostComponent("spark.components.Button")]</fx:Metadata>
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<s:BitmapImage smooth="true" source="@Embed('/assets/images/traveler3/Layer 27.png')" d:userLabel="Layer 27" x="0" y="0"/>
+	<s:RichText color="#ffffff" fontFamily="Helvetica" fontSize="31.76" kerning="off" lineHeight="120%" text="Start Video Chat" d:userLabel="Start Video Chat" whiteSpaceCollapse="preserve" x="74" y="20"/>
+</s:Skin>
